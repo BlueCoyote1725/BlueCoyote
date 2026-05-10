@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница стримера</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Georgia', serif;
+        background: linear-gradient(135deg, #f8f9e9 0%, #e8f5e9 50%, #f0f7ff 100%);
+        color: #3a3a3a;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        line-height: 1.7;
+    }
+
+    .container {
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f0f8e0"/><path d="M0 50 Q25 30, 50 50 T100 50 L100 100 L0 100 Z" fill="%23d4e8c8" opacity="0.3"/></svg>') repeat,
+                  rgba(240, 248, 224, 0.8);
+        border: 1px solid rgba(181, 213, 171, 0.6);
+        border-radius: 25px;
+        padding: 45px;
+        max-width: 620px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+        margin-bottom: 15px;
+        font-size: 2.7em;
+        color: #2e7d32;
+        font-weight: 600;
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+        position: relative;
+    }
+
+    h1::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(to right, transparent, #4caf50, transparent);
+    }
+
+    .description {
+        margin-bottom: 35px;
+        font-size: 1.1em;
+        opacity: 0.9;
+        color: #5d4037;
+        font-style: italic;
+    }
+
+    .group-title {
+        text-align: left;
+        margin: 35px 0 20px 0;
+        color: #5d4037;
+        font-weight: 600;
+        font-size: 1.3em;
+        border-left: 4px solid #8bc34a;
+        padding-left: 18px;
+        position: relative;
+    }
+
+    .group-title::before {
+        content: '🌿';
+        position: absolute;
+        left: -25px;
+        top: 0;
+    }
+
+    .links-grid {
+        display: grid;
+        gap: 22px;
+        grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    }
+
+    .link-card {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 24px;
+        border-radius: 18px;
+        transition: all 0.4s ease;
+        text-decoration: none;
+        color: #4e342e;
+        border: 1px solid rgba(204, 230, 198, 0.7);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .link-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(to right, #8bc34a, #4caf50);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+
+    .link-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .link-card:hover {
+        transform: translateY(-5px);
+        box-shadow:
+            0 12px 25px rgba(93, 64, 55, 0.15),
+            0 0 0 1px #8bc34a;
+        border-color: #8bc34a;
+    }
+
+    .link-icon {
+        font-size: 2em;
+        margin-bottom: 12px;
+        color: #689f38;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .link-card:hover .link-icon {
+        color: #388e3c;
+        transform: rotate(5deg);
+    }
+
+    .link-text {
+        font-weight: 500;
+        font-size: 1.1em;
+        letter-spacing: 0.3px;
+    }
+
+    footer {
+        margin-top: 45px;
+        opacity: 0.7;
+        font-size: 0.9em;
+        color: #795548;
+        text-align: center;
+        font-style: italic;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Blue Coyote</h1>
+        <p class="description">Здесь собраны все важные ссылки.</p>
+
+        <h2 class="group-title">Стримы</h2>
+
+        <div class="links-grid">
+<a href="https://www.youtube.com/@bluecoyotecreation" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">🎥</div>
+                <div class="link-text">YouTube Стримы</div>
+            </a>
+
+
+<a href="https://live.vkvideo.ru/blue_coyote" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">LIVE🔴</div>
+                <div class="link-text">VK Видео Live</div>
+            </a>
+
+            <a href="https://www.twitch.tv/bluecoyote_1725" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">👾</div>
+                <div class="link-text">Twitch</div>
+            </a>
+
+
+
+
+        </div>
+
+        <h2 class="group-title">Новости, нарезки</h2>
+
+        <div class="links-grid">
+
+            <a href="https://t.me/bluecoyote01" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">ᯓ➤</div>
+                <div class="link-text">Telegram</div>
+            </a>
+   <a href="https://www.youtube.com/@reactionbluecoyote" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">🎬</div>
+                <div class="link-text">YouTube Нарезки</div>
+            </a>
+
+            <a href="https://boosty.to/blue_coyote" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">🔥</div>
+                <div class="link-text">Boosty</div>
+            </a>
+
+         
+
+<a href="https://vkvideo.ru/@club236253776" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">🅱️</div>
+                <div class="link-text">VK Видео</div>
+            </a>
+
+        </div>
+
+        <h2 class="group-title">Донаты</h2>
+
+        <div class="links-grid">
+
+            <a href="https://www.donationalerts.com/r/blue_coyote" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">🎁</div>
+                <div class="link-text">DonationAlerts</div>
+
+<a href="https://memealerts.com/bluecoyote" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">🤪</div>
+                <div class="link-text">MemeAlerts</div>
+            </a>
+            </a>
+
+<a href="https://donatex.gg/donate/bluecoyote" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">✖️</div>
+                <div class="link-text">DonateX</div>
+            </a>
+
+<a href="https://donatepay.ru/don/bluecoyote" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">💸</div>
+                <div class="link-text">Donate Pay</div>
+            </a>
+
+
+ </div>
+
+<h2 class="group-title">Полезные таблицы</h2>
+
+        <div class="links-grid">
+<a href="https://docs.google.com/spreadsheets/d/1S7LKQCBkww0FnzMInJlIZOYTuLYLFK85Zh9yN8BjhrE/edit?usp=sharing" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">📆</div>
+                <div class="link-text">Расписание стримов</div>
+            </a>
+
+            <a href="https://docs.google.com/spreadsheets/d/1ouh4iqyiu80NHalezYyLTze7AfO9cDpBl22IT9PYYkQ/edit?usp=sharing" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">📝</div>
+                <div class="link-text">Очередь видео на просмотр</div>
+            </a>
+
+
+
+<a href="https://docs.google.com/spreadsheets/d/13ovjk3yI4Ot2iHNGhNLnawyC7OvBAvY1BdK3LvCLR44/edit?usp=sharing" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="link-icon">📊</div>
+                <div class="link-text">Отсмотренные фильмы</div>
+            </a>
+
+        </div>
+
+        <footer>
+            &copy; Все права защищены 2026 Blue Coyote
+        </footer>
+    </div>
+</body>
+</html>
